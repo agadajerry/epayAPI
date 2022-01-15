@@ -5,6 +5,16 @@ import { authoriseUser } from "../utils/auth_middleware";
 
 const router = express.Router();
 
+
+
+router.get("/", (req: Request, res: Response) => {
+  res.json({
+    msg: " to access registration route is, /register, login is /login",msg2:"The transfer route is protected.."
+  });
+})
+
+
+
 //  New User registration routes
 
 router.post("/register", transferController.registerUser);
