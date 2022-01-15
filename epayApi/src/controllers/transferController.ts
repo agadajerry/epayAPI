@@ -453,7 +453,7 @@ export const getTransactionOfUser = (
     let userAccNo = req.params.accountnumber;
 
     transScheme
-      .find({ userAccountNumber: userAccNo })
+      .find({ senderAccount: userAccNo })
       .select({
         receiverAccount: 1,
         amount: 1,
